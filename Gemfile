@@ -1,8 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.9'
+gem 'bcrypt', '3.1.11'
 gem 'bootstrap-sass', '3.3.7'
 gem 'sqlite3'
+gem 'mysql2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
