@@ -1,3 +1,7 @@
 1. Static pages
 - rails generate controller StaticPages home help
 - touch app/views/static_pages/about.html.erb
+
+2. Filling in the layout
+- curl -o app/assets/images/rails.png -OL railstutorial.org/rails.png
+- rails generate controller Users new
