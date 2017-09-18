@@ -13,3 +13,9 @@
 
 4. Sign up
 - bundle exec rake db:reset - reset record database
+
+5. Signin - Signout
+- rails generate controller Sessions --no-test-framework
+- rake routes
+- rails generate migration add_remember_token_to_users
+- bundle exec rake db:migrate
