@@ -19,3 +19,9 @@
 - rake routes
 - rails generate migration add_remember_token_to_users
 - bundle exec rake db:migrate
+
+6. Updating, showing, deleting users
+- rails generate migration add_admin_to_users admin:boolean
+- bundle exec rake db:migrate
+- bundle exec rake db:reset
+- rails g config:install
