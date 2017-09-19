@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
+  has_many :microposts, dependent: :destroy
+
   before_save {self.email = email.downcase}
+  
   validates :name,  presence: true, length: {maximum: 50}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, length: {maximum: 255},
@@ -10,5 +13,9 @@ class User < ActiveRecord::Base
 
   def current_user? user
     self == user
+  end
+
+  def feed
+    microposts
   end
 end

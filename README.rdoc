@@ -25,3 +25,8 @@
 - bundle exec rake db:migrate
 - bundle exec rake db:reset
 - rails g config:install
+
+7. User microposts
+- rails generate model Micropost content:string user_id:integer
+- rails generate uploader Picture
+- rails generate migration add_picture_to_microposts picture:string

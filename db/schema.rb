@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170919085731) do
+ActiveRecord::Schema.define(version: 20170919171924) do
+
+  create_table "microposts", force: :cascade do |t|
+    t.string   "content",    limit: 255
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "picture",    limit: 255
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255
